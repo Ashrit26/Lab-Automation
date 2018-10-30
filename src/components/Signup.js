@@ -3,11 +3,6 @@ import { Link,
   withRouter, } from 'react-router-dom';
 import { auth } from '../firebase';
 import * as routes from '../constants/routes';
-import color from '@material-ui/core/colors/red';
-import purple from '@material-ui/core/colors/purple';
-
-
-
 
 const SignUpPage = ({ history }) =>
   <div>
@@ -38,7 +33,6 @@ class SignUpForm extends Component {
 	    const {
       username,
       email,
-      branch,
       passwordOne,
     } = this.state;
 
@@ -82,9 +76,8 @@ class SignUpForm extends Component {
     return (
 	<div className="login">
 	<div className="login-screen">
-				<div style={{textAlign: "center"}}>	
-        			<h1 style={{color: "#ff1744"}}>SignUp</h1>
-
+				<div className="app-title">
+				<h1 style={{color: "#ff3d00"}}>SignUp</h1>
 			</div>
 	<div className="login-form">
       <form onSubmit={this.onSubmit}>
@@ -106,12 +99,12 @@ class SignUpForm extends Component {
 </div>
 <div className="control-group">
         <input
-        value={branch}
-        onChange={event => this.setState(byPropKey('branch', event.target.value))}
-        type="text"
-        placeholder="Branch"
+          value={branch}
+          onChange={event => this.setState(byPropKey('branch', event.target.value))}
+          type="text"
+          placeholder="Branch"
         /><label className="login-field-icon fui-user"></label>
-</div>       
+</div>
 <div className="control-group">
         <input
           value={passwordOne}

@@ -32,7 +32,7 @@ const styles1 = theme => ({
   },
 });
 
-
+                
 function ContainedButtons(props) {
   const { classes } = props;
   return (
@@ -47,7 +47,6 @@ function ContainedButtons(props) {
       </div>
   );
 }
-
 ContainedButtons.propTypes = {
   classes: PropTypes.object.isRequired,
 };

@@ -21,6 +21,7 @@ const INITIAL_STATE = {
   error: null,
 };
 
+
 class SignInForm extends Component {
   constructor(props) {
     super(props);
@@ -69,8 +70,8 @@ class SignInForm extends Component {
     return (
 	<div className="login">
 	<div className="login-screen w3-center">
-				<div style={{textAlign: "center"}}>
-				<h1 style={{color: "#ff1744"}}>SignIn</h1>
+				<div className="app-title">
+				<h1 style={{color: "#ff3d00"}}>SignIn</h1>
 			</div>
 	<div className="login-form">
       <form onSubmit={this.onSubmit}>
